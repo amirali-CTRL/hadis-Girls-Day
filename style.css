@@ -1,0 +1,456 @@
+
+:root {
+  color-scheme: dark;
+  --bg: #080510;
+  --panel: #130b20;
+  --purple: #a855f7;
+  --light-purple: #e9d5ff;
+  --text: #f8f3ff;
+  --muted: #b7a6ca;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  min-height: 100%;
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text);
+  font-family: Tahoma, Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at 50% 20%, #301044 0%, transparent 45%),
+    linear-gradient(160deg, #10071b, #080510 75%);
+}
+
+button {
+  font: inherit;
+}
+
+.world {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+/* صفحه ورود */
+
+.welcome {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 22px;
+  text-align: center;
+  animation: appear 700ms ease both;
+}
+
+.welcome-stars {
+  margin-bottom: 30px;
+  color: #d8b4fe;
+  font-size: clamp(22px, 6vw, 34px);
+  letter-spacing: 5px;
+  text-shadow: 0 0 22px var(--purple);
+  animation: twinkle 3s ease-in-out infinite alternate;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #c084fc;
+  font-size: 10px;
+  letter-spacing: 2px;
+  line-height: 1.9;
+}
+
+.welcome h1 {
+  margin: 0;
+  color: var(--light-purple);
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 9vw, 58px);
+  line-height: 1.2;
+  text-shadow: 0 0 30px #a855f773;
+}
+
+.welcome h2 {
+  margin: 18px 0 0;
+  font-size: clamp(17px, 4.5vw, 23px);
+  line-height: 1.8;
+}
+
+.intro {
+  max-width: 300px;
+  margin: 14px 0 35px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.play-button {
+  position: relative;
+  display: inline-flex;
+  min-width: 174px;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 15px 28px;
+  overflow: hidden;
+  border: 1px solid #c084fc;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #37105b, #10071b 75%);
+  box-shadow:
+    0 0 12px #a855f7a6,
+    0 0 35px #7e22ce40,
+    inset 0 0 15px #a855f721;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.play-button::before {
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  width: 45%;
+  height: 220%;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ffffff3d,
+    transparent
+  );
+  transform: rotate(25deg);
+  animation: shine 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.play-button:active {
+  transform: scale(.96);
+  box-shadow: 0 0 22px #a855f7b3;
+}
+
+.play-button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 5px;
+}
+
+.hint {
+  margin: 22px 0 0;
+  color: #a78bfa;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* صفحه دوم */
+
+.story {
+  width: 100%;
+  max-width: 760px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 38px 20px 30px;
+  animation: appear 600ms ease both;
+}
+
+.story-header {
+  position: relative;
+  padding: 24px 8px 30px;
+  text-align: center;
+}
+
+.tiny-star {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #e9d5ff;
+  font-size: 28px;
+  text-shadow: 0 0 20px var(--purple);
+}
+
+.story-header h2 {
+  margin: 8px 0 12px;
+  color: var(--light-purple);
+  font-size: clamp(26px, 7vw, 39px);
+  line-height: 1.7;
+  text-shadow: 0 0 26px #a855f74d;
+}
+
+.story-intro {
+  max-width: 450px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2.2;
+}
+
+.glow-line {
+  width: min(180px, 55%);
+  height: 1px;
+  margin: 25px auto 0;
+  background: linear-gradient(90deg, transparent, #c084fc, transparent);
+  box-shadow: 0 0 12px var(--purple);
+}
+
+.story-section {
+  padding: 12px 0;
+}
+
+.section-label {
+  margin: 0 0 10px;
+  color: #c084fc;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.story-section > h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(18px, 5vw, 23px);
+  line-height: 1.9;
+  text-align: center;
+}
+
+.section-description {
+  max-width: 430px;
+  margin: 8px auto 28px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2.1;
+  text-align: center;
+}
+
+/* کارت‌های داستان */
+
+.scene-card {
+  margin: 0 0 22px;
+  overflow: hidden;
+  border: 1px solid #a855f750;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #180d27, #0e0916);
+  box-shadow: 0 10px 35px #00000026, inset 0 0 25px #a855f70a;
+}
+
+
+.scene-art {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid #a855f733;
+  background: #10071b;
+}
+
+.scene-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+
+.scene-art::before,
+.scene-art::after {
+  position: absolute;
+  width: 155px;
+  height: 155px;
+  border: 1px solid #c084fc35;
+  border-radius: 50%;
+  content: "";
+}
+
+.scene-art::after {
+  width: 115px;
+  height: 115px;
+  border-color: #c084fc55;
+}
+
+.scene-symbol {
+  z-index: 1;
+  color: #f0d9ff;
+  font-size: 46px;
+  text-shadow: 0 0 25px #a855f7;
+}
+
+.scene-heart {
+  position: absolute;
+  top: 25px;
+  right: 22%;
+  color: #d8b4fe;
+  font-size: 24px;
+  text-shadow: 0 0 16px var(--purple);
+}
+
+.scene-sparkle {
+  position: absolute;
+  bottom: 24px;
+  left: 23%;
+  color: #e9d5ff;
+  font-size: 22px;
+  text-shadow: 0 0 15px var(--purple);
+}
+
+.scene-second {
+  background:
+    radial-gradient(ellipse at 50% 45%, #6334a64d, transparent 55%),
+    linear-gradient(145deg, #100d25, #090711);
+}
+
+.scene-third {
+  background:
+    radial-gradient(ellipse at 50% 45%, #a52c9940, transparent 55%),
+    linear-gradient(145deg, #1b0b27, #090711);
+}
+
+.scene-info {
+  padding: 20px 19px 22px;
+}
+
+.scene-number {
+  color: #c084fc;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.scene-info h4 {
+  margin: 10px 0;
+  color: var(--light-purple);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.scene-info p {
+  margin: 0 0 15px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2.1;
+}
+
+.coming-soon {
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid #a855f738;
+  border-radius: 9px;
+  color: #c4a2e6;
+  background: #a855f70b;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+/* پایان صفحه */
+
+.story-footer {
+  padding: 28px 10px 20px;
+  text-align: center;
+}
+
+.footer-stars {
+  color: #d8b4fe;
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-shadow: 0 0 18px var(--purple);
+}
+
+.story-footer p {
+  margin: 16px 0 12px;
+  color: var(--light-purple);
+  font-size: 14px;
+}
+
+.story-footer > span {
+  color: #8f7da5;
+  font-family: Georgia, serif;
+  font-size: 10px;
+  line-height: 2;
+}
+
+/* انیمیشن‌های سبک */
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  from {
+    opacity: .65;
+    transform: scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes shine {
+  0%, 65% { left: -70%; }
+  85%, 100% { left: 140%; }
+}
+
+/* گوشی افقی */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .welcome {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .welcome-stars {
+    margin-bottom: 12px;
+  }
+
+  .intro {
+    margin-top: 8px;
+    margin-bottom: 18px;
+  }
+
+  .hint {
+    margin-top: 12px;
+  }
+
+  .story {
+    padding-top: 20px;
+  }
+}
+
+/* کاهش حرکت برای دسترسی‌پذیری */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

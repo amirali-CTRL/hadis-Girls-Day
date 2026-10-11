@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080510">
+  <meta name="description" content="A little purple world made with love.">
+  <title>Mika | A Little Purple World</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<audio id="backgroundMusic" loop preload="auto">
+  <source src="audio/afterdark.mp3" type="audio/mpeg">
+</audio>
+
+  <main class="world">
+
+    <!-- صفحه اول؛ ظاهر PLAY حفظ شده -->
+    <section class="welcome" id="welcome">
+      <div class="welcome-stars" aria-hidden="true">✦　·　✧　·　✦</div>
+      <p class="eyebrow">A LITTLE WORLD, JUST FOR YOU</p>
+      <h1>A Little World</h1>
+      <h2>مخصوص تو، با کلی محبتتتت 💜</h2>
+      <p class="intro">من وتو</p>
+
+      <button class="play-button" id="playButton" type="button">
+        <span aria-hidden="true">▶</span>
+        <span>PLAY</span>
+      </button>
+
+      <p class="hint">✧ برای شروع، روی پلی بزن ✧</p>
+    </section>
+
+    <!-- صفحه داستان -->
+    <section class="story" id="story" hidden>
+      <header class="story-header">
+        <span class="tiny-star" aria-hidden="true">✧</span>
+        <p class="eyebrow">هدیه گوگولو برای یک دختر گوگولو</p>
+
+        <!-- متن عنوان صفحه -->
+        <h2>روز دختر مبارک 💜</h2>
+        <p class="story-intro">
+          ساخته شده در استودیو قلب من
+        </p>
+
+        <div class="glow-line" aria-hidden="true"></div>
+      </header>
+
+      <section class="story-section">
+        <p class="section-label">عکاسی  میکا و کارکتر من</p>
+        <h3>یک تبریک گوگولو برای خانم گوگولو</h3>
+        <p class="section-description">
+          عههه مااااا
+        </p>
+
+        <!-- عکس اول -->
+        <article class="scene-card">
+          <div class="scene-art">
+            <img src="images/scene-1.jpg" alt="صحنه اول از دنیای میکا">
+          </div>
+          <div class="scene-info">
+            <span class="scene-number">SCENE 01</span>
+            <h4>روزت مبارکککک</h4>
+            <p>مرسی تمام لحظه ها کنارم بودی و هستی</p>
+          </div>
+        </article>
+
+        <!-- عکس دوم -->
+        <article class="scene-card">
+          <div class="scene-art">
+            <img src="images/scene-2.jpg" alt="صحنه دوم از دنیای میکا">
+          </div>
+          <div class="scene-info">
+            <span class="scene-number">SCENE 02</span>
+            <h4>یک شب بنفششش</h4>
+            <p>تا اخر متن ها برات یک چیز نوشتم شاید تونستم اخرش یک سی حرف هامو بزنم  دختر</p>
+          </div>
+        </article>
+
+        <!-- عکس سوم -->
+        <article class="scene-card">
+          <div class="scene-art">
+            <img src="images/scene-3.jpg" alt="صحنه سوم از دنیای میکا">
+          </div>
+          <div class="scene-info">
+            <span class="scene-number">SCENE 03</span>
+            <h4>لحظه‌های قشنگ</h4>
+            <p>همشه بدون من کنارتم  هیچ وقت نمیرم</p>
+          </div>
+        </article>
+
+        <!-- عکس چهارم -->
+        <article class="scene-card">
+          <div class="scene-art">
+            <img src="images/scene-4.jpg" alt="صحنه چهارم از دنیای میکا">
+          </div>
+          <div class="scene-info">
+            <span class="scene-number">SCENE 04</span>
+            <h4>یه خاطره دیگه</h4>
+            <p>میدونم یک سری کارا میکنم که باعث خجالت و حتی ناراحتیت میشه  تمام تلاشمو میکنم  درکت کنم </p>
+          </div>
+        </article>
+
+        <!-- عکس پنجم -->
+        <article class="scene-card">
+          <div class="scene-art">
+            <img src="images/scene-5.jpg" alt="صحنه پنجم از دنیای میکا">
+          </div>
+          <div class="scene-info">
+            <span class="scene-number">SCENE 05</span>
+            <h4>دنیای کوچولوی ما</h4>
+            <p>راستشو بخوای فکر کنم اینجا بتونم بگم که واقعا ناراحت و  شوکه شدم  که گفتی ویپ میکشی</p>
+          </div>
+        </article>
+
+        <!-- عکس ششم -->
+        <article class="scene-card">
+          <div class="scene-art">
+            <img src="images/scene-6.jpg" alt="کارت پایانی روز دختر">
+          </div>
+          <div class="scene-info">
+            <span class="scene-number">SCENE 06</span>
+            <h4>برای میکا 💜</h4>
+            <p>میدونم خنده داره لطفا نگگو درمردش مرسی  ولی نگاه چه کارت پستال قشنگبیه</p>
+          </div>
+        </article>
+
+      </section>
+
+      <footer class="story-footer">
+        <div class="footer-stars" aria-hidden="true">✦ ✧ ⋆ ✧ ✦</div>
+        <p>این دنیای کوچولو برای توئه 💜</p>
+        <span>ساخته شده توسط   عشق من برای تو</span>
+      </footer>
+    </section>
+
+  </main>
+</body>
+</html>
